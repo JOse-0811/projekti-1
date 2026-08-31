@@ -5,8 +5,11 @@ const getAll = () => {
     return axios.get(baseUrl)
 }
 
-
+const lisaa = (tiedot) => {
+    return axios.post(baseUrl, tiedot)
+}
 
 export default {
-    getAll: getAll
+    getAll: getAll,
+    lisaa: lisaa
 }
