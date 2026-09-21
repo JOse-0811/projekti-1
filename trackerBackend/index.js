@@ -3,6 +3,7 @@ const cors = require('cors')
 const { Sequelize, Model, DataTypes } = require('sequelize')
 require('dotenv').config()
 const { default: entries } = require('../tracker/src/servise/entries')
+const morgan = require('morgan')
 const app = express()
 
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
@@ -12,6 +13,7 @@ const sequelize = new Sequelize(process.env.DATABASE_URL, {
 })
 class Entries extends Model {}
 
+ console.log('palvelu käynnistyy')
 
 Entries.init({
     id: {
@@ -44,6 +46,8 @@ Entries.init({
 
   Entries.sync()
 
+  console.log('palvelu käynnistyy')
+  
   app.get('/api/entries', (request, response, next) => {
     Entries.findAll()
         .then(entries => response.json(entries))
