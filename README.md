@@ -9,6 +9,12 @@ Kouluprojektina tehty pienimuotoinen päiväkirja, johon voit merkitä päivitt�
 -Monta tuntia nukuit
 -Lisää merkintä ja selaa
 
-#Käytetyt kielet
+#Käytetyt tekniikat
 
 -HTML
+-JavaScript
+-CSS
+-SGL
+
+##Käyttö
+
